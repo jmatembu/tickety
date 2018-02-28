@@ -33,4 +33,16 @@ class ConcertTest extends TestCase
 
         $this->assertEquals('8:00pm', $concert->formatted_start_time);
     }
+
+    /**
+     * @test
+     */
+    public function can_get_price_in_dollars()
+    {
+        $concert = factory(Concert::class)->create([
+            'price' => 3250
+        ]);
+
+        $this->assertEquals(32.50, $concert->price_in_dollars);
+    }
 }
