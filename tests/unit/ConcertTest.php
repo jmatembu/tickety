@@ -8,14 +8,12 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ConcertTest extends TestCase
 {
-    use DatabaseMigrations;
-
     /**
      * @test
      */
     public function can_get_formatted_date()
     {
-        $concert = factory(Concert::class)->create([
+        $concert = factory(Concert::class)->make([
             'date' => Carbon::parse('2018-02-28 8:00pm')
         ]);
 
@@ -27,7 +25,7 @@ class ConcertTest extends TestCase
      */
     public function can_get_formatted_start_time()
     {
-        $concert = factory(Concert::class)->create([
+        $concert = factory(Concert::class)->make([
             'date' => Carbon::parse('2018-02-28 20:00:00')
         ]);
 
@@ -39,7 +37,7 @@ class ConcertTest extends TestCase
      */
     public function can_get_price_in_dollars()
     {
-        $concert = factory(Concert::class)->create([
+        $concert = factory(Concert::class)->make([
             'price' => 3250
         ]);
 
