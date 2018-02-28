@@ -10,8 +10,23 @@ class Concert extends Model
 
     protected $dates = ['date'];
 
+    /**
+     * Formate date
+     *
+     * @return string
+     */
     public function getFormattedDateAttribute()
     {
         return $this->date->format('F j, Y');
+    }
+
+    /**
+     * Format start time
+     *
+     * @return string
+     */
+    public function getFormattedStartTimeAttribute()
+    {
+        return $this->date->format('g:ia');
     }
 }
