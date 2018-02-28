@@ -28,6 +28,7 @@ class ViewConcertListingTest extends TestCase
             'state' => 'ON',
             'zip' => '17916',
             'additional_information' => 'For tickets, call (080) 000-0000',
+            'published_at' => Carbon::parse('-1 Week')
         ]);
 
         // Act and Assert
@@ -47,5 +48,17 @@ class ViewConcertListingTest extends TestCase
         $this->see('ON');
         $this->see('17916');
         $this->see('For tickets, call (080) 000-0000');
+    }
+
+    /** @test */
+    public function user_cannot_view_unpublished_concert_listings()
+    {
+        $concert = factory(Concert::class)->create([
+            'published_at' => null
+        ]);
+
+        $this->get('/concert/' . $concert->id);
+
+        $this->assertResponseStatus(404);
     }
 }
