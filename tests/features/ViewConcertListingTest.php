@@ -13,7 +13,7 @@ class ViewConcertListingTest extends TestCase
     /**
      * @test
      */
-    function user_can_view_a_concert_listing()
+    function user_can_view_a_published_concert_listing()
     {
         // Arrange
         // Create a concert for a user to view

@@ -10,6 +10,10 @@ class Concert extends Model
 
     protected $dates = ['date'];
 
+    public function scopePublished($query)
+    {
+        return $query->whereNotNull('published_at');
+    }
     /**
      * Formate date
      *
