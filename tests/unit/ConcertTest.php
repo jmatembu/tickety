@@ -13,7 +13,7 @@ class ConcertTest extends TestCase
     /**
      * @test
      */
-    public function can_get_formatted_date()
+    function can_get_formatted_date()
     {
         $concert = factory(Concert::class)->make([
             'date' => Carbon::parse('2018-02-28 8:00pm')
@@ -25,7 +25,7 @@ class ConcertTest extends TestCase
     /**
      * @test
      */
-    public function can_get_formatted_start_time()
+    function can_get_formatted_start_time()
     {
         $concert = factory(Concert::class)->make([
             'date' => Carbon::parse('2018-02-28 20:00:00')
@@ -37,7 +37,7 @@ class ConcertTest extends TestCase
     /**
      * @test
      */
-    public function can_get_price_in_dollars()
+    function can_get_price_in_dollars()
     {
         $concert = factory(Concert::class)->make([
             'price' => 3250
@@ -47,7 +47,7 @@ class ConcertTest extends TestCase
     }
 
     /** @test */
-    public function concerts_with_a_published_at_date_are_published()
+    function concerts_with_a_published_at_date_are_published()
     {
         $publishedConcertA = factory(Concert::class)->create([
             'published_at' => Carbon::parse('-1 Week')
@@ -64,5 +64,16 @@ class ConcertTest extends TestCase
         $this->assertTrue($publishedConcerts->contains($publishedConcertA));
         $this->assertTrue($publishedConcerts->contains($publishedConcertB));
         $this->assertFalse($publishedConcerts->contains($unpublishedConcert));
+    }
+
+    /** @test */
+    function can_order_concert_tickets()
+    {
+        $concert = factory(Concert::class)->create();
+
+        $order = $concert->orderTickets('jane@example.com', 3);
+
+        $this->assertEquals('jane@example.com', $order->email);
+        $this->assertEquals(3, $order->tickets()->count());
     }
 }
