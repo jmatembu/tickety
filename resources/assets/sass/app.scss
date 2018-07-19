@@ -1,14 +1,22 @@
 
 // Fonts
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+=======
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 
 // Variables
 @import "variables";
 
 // Bootstrap
+<<<<<<< HEAD
 @import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+=======
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b

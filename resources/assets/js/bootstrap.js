@@ -1,6 +1,9 @@
 
 window._ = require('lodash');
+<<<<<<< HEAD
 window.Popper = require('popper.js').default;
+=======
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -8,6 +11,7 @@ window.Popper = require('popper.js').default;
  * code may be modified to fit the specific needs of your application.
  */
 
+<<<<<<< HEAD
 try {
     window.$ = window.jQuery = require('jquery');
 
@@ -37,6 +41,31 @@ if (token) {
 } else {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
+=======
+window.$ = window.jQuery = require('jquery');
+require('bootstrap-sass');
+
+/**
+ * Vue is a modern JavaScript library for building interactive web interfaces
+ * using reactive data binding and reusable components. Vue's API is clean
+ * and simple, leaving you to focus on building your next great project.
+ */
+
+window.Vue = require('vue');
+require('vue-resource');
+
+/**
+ * We'll register a HTTP interceptor to attach the "CSRF" header to each of
+ * the outgoing requests issued by this application. The CSRF middleware
+ * included with Laravel will automatically verify the header's value.
+ */
+
+Vue.http.interceptors.push((request, next) => {
+    request.headers.set('X-CSRF-TOKEN', Laravel.csrfToken);
+
+    next();
+});
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -44,6 +73,7 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
+<<<<<<< HEAD
 // import Echo from 'laravel-echo'
 
 // window.Pusher = require('pusher-js');
@@ -53,4 +83,11 @@ if (token) {
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
+=======
+// import Echo from "laravel-echo"
+
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: 'your-pusher-key'
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 // });

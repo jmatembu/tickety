@@ -10,10 +10,16 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+<<<<<<< HEAD
     |
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+=======
+    */
+
+    'name' => 'Laravel',
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 
     /*
     |--------------------------------------------------------------------------
@@ -110,6 +116,26 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+    | Logging Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the log settings for your application. Out of
+    | the box, Laravel uses the Monolog PHP logging library. This gives
+    | you a variety of powerful log handlers / formatters to utilize.
+    |
+    | Available Settings: "single", "daily", "syslog", "errorlog"
+    |
+    */
+
+    'log' => env('APP_LOG', 'single'),
+
+    'log_level' => env('APP_LOG_LEVEL', 'debug'),
+
+    /*
+    |--------------------------------------------------------------------------
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -151,6 +177,11 @@ return [
          * Package Service Providers...
          */
 
+<<<<<<< HEAD
+=======
+        //
+
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
         /*
          * Application Service Providers...
          */
@@ -179,7 +210,10 @@ return [
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
         'Blade' => Illuminate\Support\Facades\Blade::class,
+<<<<<<< HEAD
         'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
+=======
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
         'Bus' => Illuminate\Support\Facades\Bus::class,
         'Cache' => Illuminate\Support\Facades\Cache::class,
         'Config' => Illuminate\Support\Facades\Config::class,

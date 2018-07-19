@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+<<<<<<< HEAD
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+=======
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:api');
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b

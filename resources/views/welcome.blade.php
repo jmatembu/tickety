@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+=======
+<!DOCTYPE html>
+<html lang="en">
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,12 +73,21 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
+<<<<<<< HEAD
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
+=======
+                    @if (Auth::check())
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                    @endif
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
                 </div>
             @endif
 

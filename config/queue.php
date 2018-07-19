@@ -50,11 +50,19 @@ return [
 
         'sqs' => [
             'driver' => 'sqs',
+<<<<<<< HEAD
             'key' => env('SQS_KEY', 'your-public-key'),
             'secret' => env('SQS_SECRET', 'your-secret-key'),
             'prefix' => env('SQS_PREFIX', 'https://sqs.us-east-1.amazonaws.com/your-account-id'),
             'queue' => env('SQS_QUEUE', 'your-queue-name'),
             'region' => env('SQS_REGION', 'us-east-1'),
+=======
+            'key' => 'your-public-key',
+            'secret' => 'your-secret-key',
+            'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
+            'queue' => 'your-queue-name',
+            'region' => 'us-east-1',
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
         ],
 
         'redis' => [
@@ -62,7 +70,10 @@ return [
             'connection' => 'default',
             'queue' => 'default',
             'retry_after' => 90,
+<<<<<<< HEAD
             'block_for' => null,
+=======
+>>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
         ],
 
     ],
