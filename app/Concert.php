@@ -2,17 +2,12 @@
 
 namespace App;
 
-<<<<<<< HEAD
-=======
 use App\Order;
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 use Illuminate\Database\Eloquent\Model;
 
 class Concert extends Model
 {
     protected $guarded = [];
-<<<<<<< HEAD
-=======
 
     protected $dates = ['date'];
 
@@ -64,5 +59,4 @@ class Concert extends Model
 
         return $order;
     }
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 }

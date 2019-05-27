@@ -4,22 +4,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
-    | PDO Fetch Style
-    |--------------------------------------------------------------------------
-    |
-    | By default, database results will be returned as instances of the PHP
-    | stdClass object; however, you may desire to retrieve records in an
-    | array format for simplicity. Here you can tweak the fetch style.
-    |
-    */
-
-    'fetch' => PDO::FETCH_OBJ,
-
-    /*
-    |--------------------------------------------------------------------------
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
     | Default Database Connection Name
     |--------------------------------------------------------------------------
     |
@@ -62,14 +46,9 @@ return [
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
-<<<<<<< HEAD
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
-=======
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
             'prefix' => '',
             'strict' => true,
             'engine' => null,
@@ -88,7 +67,6 @@ return [
             'sslmode' => 'prefer',
         ],
 
-<<<<<<< HEAD
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST', 'localhost'),
@@ -100,8 +78,6 @@ return [
             'prefix' => '',
         ],
 
-=======
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
     ],
 
     /*
@@ -130,11 +106,7 @@ return [
 
     'redis' => [
 
-<<<<<<< HEAD
         'client' => 'predis',
-=======
-        'cluster' => false,
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 
         'default' => [
             'host' => env('REDIS_HOST', '127.0.0.1'),

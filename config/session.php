@@ -29,11 +29,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'lifetime' => env('SESSION_LIFETIME', 120),
-=======
-    'lifetime' => 120,
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 
     'expire_on_close' => false,
 
@@ -126,14 +122,10 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'cookie' => env(
         'SESSION_COOKIE',
         str_slug(env('APP_NAME', 'laravel'), '_').'_session'
     ),
-=======
-    'cookie' => 'laravel_session',
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 
     /*
     |--------------------------------------------------------------------------
@@ -187,7 +179,6 @@ return [
 
     'http_only' => true,
 
-<<<<<<< HEAD
     /*
     |--------------------------------------------------------------------------
     | Same-Site Cookies
@@ -203,6 +194,4 @@ return [
 
     'same_site' => null,
 
-=======
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 ];

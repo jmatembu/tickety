@@ -3,44 +3,23 @@
 namespace App\Exceptions;
 
 use Exception;
-<<<<<<< HEAD
-=======
 use Illuminate\Auth\AuthenticationException;
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
     /**
-<<<<<<< HEAD
-     * A list of the exception types that are not reported.
-=======
      * A list of the exception types that should not be reported.
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
      *
      * @var array
      */
     protected $dontReport = [
-<<<<<<< HEAD
-        //
-    ];
-
-    /**
-     * A list of the inputs that are never flashed for validation exceptions.
-     *
-     * @var array
-     */
-    protected $dontFlash = [
-        'password',
-        'password_confirmation',
-=======
         \Illuminate\Auth\AuthenticationException::class,
         \Illuminate\Auth\Access\AuthorizationException::class,
         \Symfony\Component\HttpKernel\Exception\HttpException::class,
         \Illuminate\Database\Eloquent\ModelNotFoundException::class,
         \Illuminate\Session\TokenMismatchException::class,
         \Illuminate\Validation\ValidationException::class,
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
     ];
 
     /**
@@ -65,10 +44,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-<<<<<<< HEAD
-        return parent::render($request, $exception);
-    }
-=======
         //throw $exception;
         return parent::render($request, $exception);
     }
@@ -88,5 +63,4 @@ class Handler extends ExceptionHandler
 
         return redirect()->guest('login');
     }
->>>>>>> 4c338e88d2c42489fe577a3df730c3475deb532b
 }
